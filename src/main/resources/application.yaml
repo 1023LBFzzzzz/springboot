@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_cache
+    username: root
+    password: 123456
+  redis:
+    host: 127.0.0.1
+  output:
+    ansi:
+      enabled: always #控制台高亮输出
+
+mybatis: #驼峰命名规则
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging: #打印sql语句
+  level:
+    com.springboot.cache.mapper: debug
+
+
+#Spring Boot 只有1.3.x和1.3.x以下版本才支持log4j的日志配置，1.3.x以上版本只支持log4j2，logback的日志配置
